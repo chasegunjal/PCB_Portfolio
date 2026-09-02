@@ -1,1 +1,10 @@
+Overview:-
+Designed a compact 5V to 3.3V fixed-output linear voltage regulator using the MIC5317-3.3YM5-TR, a high-performance Low Dropout (LDO) regulator from Microchip Technology.
+The board converts a 5V input into a regulated 3.3V output for powering low-voltage digital and embedded systems such as ESP32, STM32, and other 3.3V logic devices.
+The MIC5317 supports an output current of up to 150 mA.
 
+Design Philosophy
+  1. Plug-and-play connectivity: JST connectors were used for the input and output interfaces to simplify connections and improve ease of integration.
+  2. Low-inductance ground return: Multiple ground vias were used at appropriate locations instead of relying on a single common ground via. This provides multiple
+     return paths and helps reduce return-path inductance (the inductance introduced by the physical path followed by return current).
+  3. Compact power path: The regulator and associated capacitors were placed close together to minimize unnecessary trace length and maintain a compact power-routing path.
