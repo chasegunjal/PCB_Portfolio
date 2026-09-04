@@ -1,23 +1,23 @@
-# 🔋 12V Hot-Swap & Power Protection PCB
+🔋 12V Hot-Swap & Power Protection PCB
 
-A custom **12 V hot-swap and power protection PCB** designed in Altium Designer using the **LTC4231IMS Hot-Swap Controller**.
+A custom 12 V hot-swap and power protection PCB designed in Altium Designer using the LTC4231IMS Hot-Swap Controller.
 
 The board is designed to provide controlled power switching and input protection for downstream electronics using external power MOSFETs and programmable voltage protection thresholds.
 
-## 🎯 Objective
+🎯 Objective:- 
 
-The objective of this project was to design a compact power-management PCB capable of:
+    The objective of this project was to design a compact power-management PCB capable of:-
 
-* Controlled connection of a 12 V power source to a load
-* Protecting downstream electronics from abnormal input conditions
-* Implementing programmable undervoltage and overvoltage monitoring
-* Handling the main power path through external NMOS devices
-* Providing transient voltage protection at the input
-* Integrating the protection circuitry into a practical PCB layout
+           1. Controlled connection of a 12 V power source to a load
+           2. Protecting downstream electronics from abnormal input conditions
+           3. Implementing programmable undervoltage and overvoltage monitoring
+           4. Handling the main power path through external NMOS devices
+           5. Providing transient voltage protection at the input
+           6. Integrating the protection circuitry into a practical PCB layout
 
-## ⚡ Circuit Overview
+⚡ Circuit Overview
 
-The design is centered around the **LTC4231IMS**, which controls the external NMOS power stage and monitors the input power conditions.
+The design is centered around the __LTC4231IMS__, which controls the external NMOS power stage and monitors the input power conditions.
 
 ```text
 12V Input
