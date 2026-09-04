@@ -1,1 +1,126 @@
+# 🔋 12V Hot-Swap & Power Protection PCB
 
+A custom **12 V hot-swap and power protection PCB** designed in Altium Designer using the **LTC4231IMS Hot-Swap Controller**.
+
+The board is designed to provide controlled power switching and input protection for downstream electronics using external power MOSFETs and programmable voltage protection thresholds.
+
+## 🎯 Objective
+
+The objective of this project was to design a compact power-management PCB capable of:
+
+* Controlled connection of a 12 V power source to a load
+* Protecting downstream electronics from abnormal input conditions
+* Implementing programmable undervoltage and overvoltage monitoring
+* Handling the main power path through external NMOS devices
+* Providing transient voltage protection at the input
+* Integrating the protection circuitry into a practical PCB layout
+
+## ⚡ Circuit Overview
+
+The design is centered around the **LTC4231IMS**, which controls the external NMOS power stage and monitors the input power conditions.
+
+```text
+12V Input
+    │
+    ├──► TVS Protection
+    │
+    ▼
+LTC4231 Hot-Swap Controller
+    │
+    ├──► Voltage Monitoring
+    │
+    ├──► Gate Control
+    │
+    ▼
+External NMOS Power Stage
+    │
+    ▼
+Protected Output
+```
+
+A resistor network connected to the controller is used to configure the voltage-monitoring thresholds, while the external MOSFET stage controls the high-current power path.
+
+## 🛡️ Protection & Power Features
+
+* **Hot-swap power control**
+* **Undervoltage monitoring**
+* **Overvoltage monitoring**
+* **External NMOS power switching**
+* **Input transient suppression**
+* **Controlled MOSFET gate drive**
+* **Dedicated input and output connectors**
+* **12 V input power architecture**
+
+An **SMBJ15A TVS diode** is included across the input supply for transient voltage suppression.
+
+## 🔩 Major Components
+
+| Component                 | Function                                          |
+| ------------------------- | ------------------------------------------------- |
+| **LTC4231IMS**            | Hot-swap and power-path controller                |
+| **External NMOS MOSFETs** | Main power switching stage                        |
+| **SMBJ15A**               | Input transient voltage suppression               |
+| **LM7805**                | 5 V linear voltage regulation                     |
+| **Resistor Network**      | Programs voltage monitoring thresholds            |
+| **CT Capacitor**          | Controller timing configuration                   |
+| **ATmega328P**            | Microcontroller section included in the schematic |
+| **J1 / J2**               | Power input/output connections                    |
+
+## 🧩 Schematic
+
+The schematic includes the LTC4231 protection controller, external MOSFET stage, TVS protection, threshold-setting resistor network, power connectors, voltage regulator, and ATmega328P section.
+
+![BMS Schematic](Images/BMS_schematic.png)
+
+## 🖥️ PCB Design
+
+The PCB was designed and routed in **Altium Designer** with attention to:
+
+* Compact component placement
+* Separation of control and power circuitry
+* Short power-path connections
+* Placement of the MOSFETs near the power path
+* Accessible input/output connectors
+* Practical component orientation
+* Power and ground routing
+
+### PCB Routing
+
+![PCB Routing](Images/BMS%20routings.png)
+
+### Top View
+
+![PCB Top View](Images/BMS%20top.png)
+
+### 3D View
+
+![PCB 3D View](Images/BMS%20front.png)
+
+## 📂 Repository Structure
+
+```text
+Battery Management System board/
+│
+├── Hardware/
+│   ├── Hotswap.SchDoc
+│   ├── PcbLib1.PcbLib
+│   └── hotswap_pcb.PcbDoc
+│
+├── Images/
+│   ├── BMS_schematic.png
+│   ├── BMS_routings.png
+│   ├── BMS_top.png
+│   └── BMS_front.png
+│
+└── Design_notes
+```
+
+## 🛠️ Tools & Technologies
+
+**Altium Designer · PCB Design · Power Electronics · Hot-Swap Control · MOSFET Switching · Circuit Protection · Schematic Capture · PCB Layout & Routing**
+
+## 📌 Project Outcome
+
+Designed a custom **12 V hot-swap power protection PCB** integrating an LTC4231-based protection controller, external MOSFET power stage, transient protection, programmable voltage monitoring, and supporting power circuitry.
+
+The project demonstrates the complete PCB development workflow from **schematic design and component selection to PCB routing and 3D board visualization**.
